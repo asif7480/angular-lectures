@@ -1,0 +1,12 @@
+<h2>Hello I am second component</h2>
+<h3>We will see how to implement data binding in angular</h3>
+
+<img [src]="imageUrl" [height]="heightValue" [width]="widthValue" alt="">
+
+<input type="text" [value]="inputText">
+<button [disabled]="isDisabled">I am button</button>
+
+<p [style.font-size]="fontSizeValue" [style.color]="fontColorValue">Separately binding each style</p>
+
+<p [ngStyle]="myStyles" >Applying multiple style at once</p>
+
