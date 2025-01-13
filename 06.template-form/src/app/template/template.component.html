@@ -1,0 +1,47 @@
+<h2 class="text-center">Template form in angular</h2>
+
+<div class="container">
+    <div class="col-md-6 mx-auto mt-4">
+        <form #form="ngForm">
+            <div class="mb-3">
+                <label for="username" class="form-label">Username</label>
+                <input type="text" name="username" #username="ngModel" [(ngModel)]="person.username" class="form-control" id="username" required minlength="3">
+                <div class="text-danger">
+                    @if( username.dirty && username.errors?.['required']){
+                        <span>This is required.</span>
+                    }@else if(username.errors?.['minlength']){
+                        <span>Minimum three letters required.</span>
+                    }
+
+                </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" name="email" [(ngModel)]="person.email" class="form-control" id="email">
+            </div>
+
+            <div class="mb-3">
+                <label for="city" class="form-label">City</label>
+                <input type="text" name="city" [(ngModel)]="person.city" class="form-control" id="city">
+            </div>
+
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" name="address" [(ngModel)]="person.address" class="form-control" id="address">
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" name="password" [(ngModel)]="person.password" class="form-control" id="password">
+            </div>
+            {{ form.invalid}}
+            <button type="submit" [disabled]="form.invalid" class="btn btn-primary" (click)="handleForm()">Submit</button>
+        </form>
+    </div>
+
+    <div class="col-md-6">
+        {{ formObj | json}}
+    </div>
+
+</div>
