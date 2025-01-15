@@ -1,0 +1,87 @@
+<h2 class="my-5 text-center">Working with reactive form in angular</h2>
+
+<div class="container">
+  <div class="col-md-6 mx-auto">
+    <form [formGroup]="personForm">
+      <div class="mb-3">
+        <label for="username" class="form-label">Username</label>
+        <input
+          type="text"
+          formControlName="username"
+          name="username"
+          class="form-control"
+          id="username"
+        />
+        @if(personForm.controls['username'].touched &&
+        personForm.controls['username'].errors?.['required']){
+        <div class="text-danger">
+          <span>Username is required</span>
+        </div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">Email address</label>
+        <input
+          type="email"
+          formControlName="email"
+          name="email"
+          class="form-control"
+          id="email"
+        />
+        @if(personForm.controls['email'].touched &&
+        personForm.controls['email'].errors?.['required']){
+        <div class="text-danger">
+          <span>Email is required</span>
+        </div>
+
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label">Password</label>
+        <input
+          type="password"
+          formControlName="password"
+          name="password"
+          class="form-control"
+          id="password"
+        />
+        @if(personForm.controls['password'].touched &&
+        personForm.controls['password'].errors?.['required']){
+        <div class="text-danger">
+          <span>Password is required</span>
+        </div>
+        }
+      </div>
+
+      <div class="mb-3">
+        <label for="contact" class="form-label">Contact</label>
+        <input
+          type="contact"
+          formControlName="contact"
+          name="contact"
+          class="form-control"
+          id="contact"
+        />
+        @if(personForm.controls['contact'].touched &&
+        personForm.controls['contact'].errors?.['required']){
+        <div class="text-danger">
+          <span>Contact is required</span>
+        </div>
+        }
+      </div>
+
+      <div class="d-flex justify-content-center">
+        <button
+          type="submit"
+          class="btn btn-primary"
+          [disabled]="personForm.invalid"
+          (click)="handleSubmit()"
+        >
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
