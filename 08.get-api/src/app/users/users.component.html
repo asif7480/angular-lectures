@@ -1,0 +1,32 @@
+<h2>Users component</h2>
+
+<div class="container">
+    <div class="col-md-6">
+        <button class="btn btn-primary" (click)="getUsers()">Get Data</button>
+    </div>
+
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Sr No.</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Website</th>
+                </tr>
+            </thead>
+            @for(item of userList; track $index){
+                <tr>
+                    <td>{{ $index+1 }}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.username }}</td>
+                    <td>{{ item.email }}</td>
+                    <td>{{ item.phone }}</td>
+                    <td>{{ item.website }}</td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
