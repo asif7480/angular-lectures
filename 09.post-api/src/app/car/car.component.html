@@ -1,0 +1,62 @@
+<h2 class="text-center my-4">Car Management</h2>
+
+<!-- form start -->
+<div class="container">
+  <div class="col-md-6 mx-auto">
+    <form>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="brand" class="form-label">Car Brand</label>
+          <input type="text" name="brand" [(ngModel)]="carObj.brand"  class="form-control" id="brand" />
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label for="model" class="form-label">Model</label>
+          <input type="text" name="model" [(ngModel)]="carObj.model"  class="form-control" id="model" />
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label for="year" class="form-label">Year</label>
+          <input type="number" name="year" [(ngModel)]="carObj.year"  class="form-control" id="year" />
+        </div>
+
+        <div class="col-md-6 mb-3">
+          <label for="color" class="form-label">Color</label>
+          <input type="text" name="color" [(ngModel)]="carObj.color"  class="form-control" id="color" />
+        </div>
+      </div>
+
+      <div class="flex text-center">
+          <button type="submit" (click)="addCar()" class="btn btn-primary">Add details</button>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- form end -->
+
+<div class="container mt-5 mb-2">
+    <h2 class="text-center mb-4">All Cars</h2>
+    <button class="btn btn-success mb-3" (click)="getCars()">Fetch cars</button>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Brand</th>
+                <th>Model</th>
+                <th>Year</th>
+                <th>Color</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(car of cars; track $index){
+                <tr>
+                    <td>{{ $index+1 }}</td>
+                    <td>{{ car.brand }}</td>
+                    <td>{{ car.model }}</td>
+                    <td>{{ car.year }}</td>
+                    <td>{{ car.color }}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

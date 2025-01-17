@@ -1,0 +1,46 @@
+{
+  "cars": [
+    {
+      "id": 1001,
+      "brand": "Suzuki",
+      "model": "mx-2323",
+      "year": 2022,
+      "color": "black"
+    },
+    {
+      "id": 1002,
+      "brand": "Lexus",
+      "model": "lx-2323",
+      "year": 2024,
+      "color": "white"
+    },
+    {
+      "id": 1003,
+      "brand": "BMW",
+      "model": "bm-4353",
+      "year": 2021,
+      "color": "blue"
+    },
+    {
+      "id": "dc1a",
+      "brand": "toyota",
+      "model": "ab-2233",
+      "year": 2022,
+      "color": "white"
+    },
+    {
+      "id": "e11d",
+      "brand": "lexus",
+      "model": "ab-2233",
+      "year": 2024,
+      "color": "white"
+    },
+    {
+      "id": "e7f5",
+      "brand": "lexus",
+      "model": "ab-2233",
+      "year": 2024,
+      "color": "black"
+    }
+  ]
+}
