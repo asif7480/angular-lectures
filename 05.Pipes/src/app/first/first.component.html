@@ -1,0 +1,21 @@
+<h2>Builtin pipes in angular</h2>
+
+<p>{{ text }} without pipe</p>
+<p>{{ text | uppercase }} with uppercase pipe</p>
+<p>{{ text | lowercase }} with lowercase pipe</p>
+<p>{{ text | titlecase }} with titlecase pipe</p>
+
+<p>{{ price | currency }}</p>
+<p>{{ price | currency: "Rs." }}</p>
+
+<h4>Date pipe</h4>
+
+<p>Date: {{ today }}</p>
+<p>Date: {{ today | date }}</p>
+<p>Long Date: {{ today | date: 'fullDate' | uppercase }}</p>
+<p>Short Date: {{ today | date: 'shortDate' }}</p>
+<p>Long date and time: {{ today | date: 'full' }}</p>
+<p>Short date and time: {{ today | date: 'short' }}</p>
+<p>Time: {{ today | date: 'h:mm:s' }}</p>
+
+<p>{{ info | json }}</p>
